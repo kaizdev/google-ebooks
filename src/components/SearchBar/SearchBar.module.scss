@@ -1,0 +1,23 @@
+form {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+input {
+    width: 40%;
+    height: 28px;
+    &::placeholder {
+        text-align: center;
+    }
+}
+
+button {
+    margin-left: 5px;
+    height: 28px;
+    border-radius: 10px;
+    &:hover {
+        background-color: lightseagreen;
+        color: white;
+        cursor: pointer;
+    }
+}

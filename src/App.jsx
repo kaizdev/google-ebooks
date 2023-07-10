@@ -1,12 +1,8 @@
 import React from "react";
 import EbooksSearchProvider from "./context/EbooksSearchProvider";
 import EbooksSearchPage from "./pages/EbooksSearchPage";
-import style from "./global.module.scss";
 
 const App = () => {
-    const ebookSubmit = (value) =>
-        console.log("You searched for ebook: ", value);
-
     return (
         <>
             <h2>Google eBooks </h2>

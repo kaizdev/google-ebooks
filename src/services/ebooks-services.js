@@ -1,11 +1,10 @@
-// Truncate book description where words > 30 to enhance grid experience
-const truncateDescription = (description, limit = 30) => {
-    const words = description.split(" ");
-    if (words.length > limit) {
-        return words.slice(0, limit).join(" ") + "...";
-    } else {
-        return description;
-    }
+// Convert USA date to AUS date
+const convertDateToAus = (publishedDate) => {
+    let date = new Date(publishedDate);
+    let day = ("0" + date.getDate()).slice(-2);
+    let month = ("0" + (date.getMonth() + 1)).slice(-2);
+    let year = date.getFullYear();
+    return `${day}/${month}/${year}`;
 };
 
 // Retrieve the eBook data via API. Clean up the data prior to mapping
@@ -35,16 +34,23 @@ export const getEbooksBySearch = async (searchString) => {
                     thumbnail:
                         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/128px-No-Image-Placeholder.svg.png",
                 },
+                publishedDate,
+                pageCount,
+                averageRating,
             },
         } = book;
         const authorsString = authors.join(", ");
-        const shortDescription = truncateDescription(description);
+
+        const publishedDateAus = convertDateToAus(publishedDate);
+
         return {
             authors: authorsString,
-            // description: shortDescription,
             description,
             title,
             thumbnail,
+            publishedDate: publishedDateAus,
+            pageCount,
+            averageRating,
         };
     });
     return bookData;

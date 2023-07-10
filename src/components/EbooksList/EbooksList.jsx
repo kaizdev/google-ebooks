@@ -1,6 +1,5 @@
 import React from "react";
 import EbookCard from "../EbookCard/EbookCard";
-import FlexWrap from "../FlexWrap/FlexWrap";
 import style from "./EbooksList.module.scss";
 
 const EbooksList = ({ ebooks }) => {
@@ -14,16 +13,3 @@ const EbooksList = ({ ebooks }) => {
 };
 
 export default EbooksList;
-
-{
-    /* <div>
-{ebooks.map((ebook, index) => (
-    <EbookCard key={index}>
-        <h3>Title: {ebook.title}</h3>
-        <p>Authors: {ebook.authors}</p>
-        <p>Description: {ebook.description}</p>
-        <img src={ebook.thumbnail} />
-    </EbookCard>
-))}
-</div> */
-}

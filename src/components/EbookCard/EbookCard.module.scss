@@ -1,8 +1,8 @@
 .card {
     width: 400px;
     height: 300px;
-    // border: 1px solid black;
     position: relative;
+    overflow: hidden;
     &:hover {
         background-color: rgb(236, 231, 231);
         cursor: pointer;
@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 400px;
 }
 
 .container {
@@ -21,12 +22,20 @@
         padding: 0 10px;
     }
     &_img {
-        padding: 10px;
+        @media screen and (min-width: 400px) {
+            padding: 10px;
+        }
     }
 }
 
-h4 {
+.title {
     text-align: center;
+    width: 100%;
+    /* this code clamps based on specified lines */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
 }
 
 span {
@@ -50,8 +59,7 @@ span {
 }
 
 .description {
-    width: 100%;
-    /* this code clamps based on specified lines */
+    width: 250px;
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 7;
@@ -60,7 +68,6 @@ span {
 
 .author {
     width: 100%;
-    /* this code clamps based on specified lines */
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

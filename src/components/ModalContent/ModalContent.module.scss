@@ -1,0 +1,36 @@
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    background-color: white;
+    border: 2px solid rgb(240, 240, 240);
+    border-radius: 12px;
+    position: fixed;
+    width: 78%;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+}
+
+.modal_container {
+    margin: 0 40px;
+}
+
+img,
+button {
+    margin: 0 auto;
+    display: block;
+}
+
+.description {
+    @media screen and (max-width: 400px) {
+        width: 100%;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 11;
+        display: -webkit-box;
+    }
+}

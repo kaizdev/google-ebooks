@@ -13,8 +13,6 @@ const EbooksLoader = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        console.log("This effect happens");
-
         if (!ebookSearch) {
             setFetchState("");
             return;
@@ -40,7 +38,9 @@ const EbooksLoader = () => {
                 </p>
             )}
             {fetchSate === "Success" && <EbooksList ebooks={ebooks} />}
-            {fetchSate === "Error" && <p>{error.message}</p>}
+            {fetchSate === "Error" && (
+                <p className={style.error_text}>{error.message}</p>
+            )}
         </>
     );
 };

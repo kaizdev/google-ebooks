@@ -17,4 +17,4 @@ The search will initially bring up results from the API, and then the user can g
 
 ## Deployed Link
 
-(Deployed Link)[https://google-ebooks-kaizdev.netlify.app/]
+[Deployed Link on Netlify](https://google-ebooks-kaizdev.netlify.app/)

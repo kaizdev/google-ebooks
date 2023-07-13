@@ -7,8 +7,10 @@ input {
     width: 55%;
     height: 28px;
     margin-bottom: 5px;
+    background-color: #d2e2ff;
     &::placeholder {
         text-align: center;
+        font-family: Roboto;
     }
 }
 
@@ -16,6 +18,7 @@ button {
     margin-left: 5px;
     height: 28px;
     border-radius: 10px;
+    font-family: Roboto;
     &:hover {
         background-color: lightseagreen;
         color: white;

@@ -3,8 +3,9 @@
     height: 300px;
     position: relative;
     overflow: hidden;
+    border-radius: 5%;
     &:hover {
-        background-color: rgb(236, 231, 231);
+        background-color: #fae01e;
         cursor: pointer;
         transform: scale(1.05);
     }

@@ -22,7 +22,7 @@ const EbookCard = ({ ebook }) => {
         <article className={style.card}>
             <div className={style.book_info}>
                 <div className={style.container_img}>
-                    {thumbnail && <img src={thumbnail} />}
+                    <img src={thumbnail} alt={title + " thumbnail"} />
                 </div>
 
                 <div className={style.container_text}>

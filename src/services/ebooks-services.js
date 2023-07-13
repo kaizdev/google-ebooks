@@ -1,10 +1,8 @@
+//todo: separate out these functions into their own
 // Convert USA date to AUS date
 const convertDateToAus = (publishedDate) => {
     let date = new Date(publishedDate);
-    let day = ("0" + date.getDate()).slice(-2);
-    let month = ("0" + (date.getMonth() + 1)).slice(-2);
-    let year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+    return date.toLocaleString("en-AU").split(",")[0];
 };
 
 // Retrieve the eBook data via API. Clean up the data prior to mapping
@@ -19,7 +17,7 @@ export const getEbooksBySearch = async (searchString) => {
     }
 
     const data = await response.json();
-    if (!data.items || !data.items.length === 0) {
+    if (!data.items || data.items.length === 0) {
         throw new Error("No search results matched your search criteria");
     }
     // the relevant book information is in the volumeInfo property of each object array

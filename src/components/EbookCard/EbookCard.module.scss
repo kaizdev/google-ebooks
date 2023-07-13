@@ -1,0 +1,75 @@
+.card {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        background-color: rgb(236, 231, 231);
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.book_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.container {
+    &_text {
+        padding: 0 10px;
+    }
+    &_img {
+        @media screen and (min-width: 400px) {
+            padding: 10px;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    /* this code clamps based on specified lines */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+}
+
+span {
+    font-weight: bold;
+}
+
+.button_more_info {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    &:hover {
+        background-color: lightseagreen;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.description {
+    width: 250px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    display: -webkit-box;
+}
+
+.author {
+    width: 100%;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+}
